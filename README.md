@@ -4,8 +4,6 @@ Steps:
 ```
 levenshteinDistance({a: 'fish', b: 'fosh'}).steps // {1}
 levenshteinDistance({a: 'fish', b: 'Fish'}).steps // {1} case sensitive
-levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {20} 
-levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {5} You can set maxDistance for more faster work. By default it's doesn't matter
 ```
 relative & similarity
 ```
@@ -19,3 +17,10 @@ The only one impl algorithm that has fn Big O notation of work less than O (n2) 
 
 https://github.com/tad-lispy/node-damerau-levenshtein
 Has scoring model(relative, similarity), I use it
+
+New:
+maxDistance model
+```
+levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {20} 
+levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {5} You can set maxDistance for more faster work. By default it's doesn't matter
+```
