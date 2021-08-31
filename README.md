@@ -22,5 +22,5 @@ New:
 maxDistance model
 ```
 levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen'}).steps // {20} 
-levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {5} You can set maxDistance for more faster work. By default it's doesn't matter
+levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {5} You can set maxDistance for faster work. By default it's doesn't matter
 ```
