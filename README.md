@@ -12,7 +12,7 @@ levenshteinDistance({a: 'fish', b: 'Fish'}).steps // {1} case sensitive
 levenshteinDistance({a:'github', b: 'gethub'}); // {relative: 0.16666666666666666, similarity: 0.8333333333333334, steps: 1}
 ```
 
-### Try to take best from all js impls
+## Try to take best from all js impls
 
 https://github.com/gustf/js-levenshtein
 The only one impl algorithm that has fn Big O notation of work less than O (n2) (also known as fast levenshtein). This can be improved by adding the maximum distance after which it makes no sense to go through the matrix.
@@ -49,3 +49,8 @@ if(_b.includes(_a))
 levenshteinDistance({a: '23176515', b: 'signage-23176515'}) // { relative: 0.09999999999999998, similarity: 0.9, steps: 8}
 levenshteinDistance({a: 'Ruslan', b: 'Ruslan-Yoda'}) // { relative: 0.09999999999999998, similarity: 0.9, steps: 8}
 ```
+## Materials for understand 
+### RUS
+https://habr.com/ru/company/directum/blog/460263/
+https://www.youtube.com/watch?v=9s6UALbavlY
+https://www.youtube.com/watch?v=d1A_PKLlJIE
