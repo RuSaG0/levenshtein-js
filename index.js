@@ -97,5 +97,11 @@ function levenshteinDistance(_obj){
         d0 = dy;
       }
     }
-    return dd;
+    const relative = dd / _b.length;
+    const similarity = 1 - relative;
+    return {
+      steps: dd,
+      relative,
+      similarity
+    };
 }
