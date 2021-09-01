@@ -22,6 +22,7 @@ Has scoring model(relative, similarity), I use it
 
 ## New:
 ### maxDistance model
+Optional parameter. I recommend using it ONLY if there is a strong need for optimization. It slightly increases speed, but noticeably decreases accuracy (relative/similarity).In most cases don't use!
 ```
 levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen'}).steps // {20} 
 levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).steps // {5} You can set maxDistance for faster work. By default it's doesn't matter
@@ -50,7 +51,12 @@ levenshteinDistance({a: '23176515', b: 'signage-23176515'}) // { relative: 0.099
 levenshteinDistance({a: 'Ruslan', b: 'Ruslan-Yoda'}) // { relative: 0.09999999999999998, similarity: 0.9, steps: 8}
 ```
 ## Materials for understand 
+### ENG
+* https://www.youtube.com/watch?v=_jK_sJrvrkY&list=PLrS21S1jm43igE57Ye_edwds_iL7ZOAG4&index=10
+* https://www.youtube.com/watch?v=kBtTT3fTSc8&list=PLrS21S1jm43igE57Ye_edwds_iL7ZOAG4&index=11
+* aditya bhargava grokking algorithms chapter 9
 ### RUS
-https://habr.com/ru/company/directum/blog/460263/
-https://www.youtube.com/watch?v=9s6UALbavlY
-https://www.youtube.com/watch?v=d1A_PKLlJIE
+* https://habr.com/ru/company/directum/blog/460263/
+* https://www.youtube.com/watch?v=P6-7bcuPs3k&list=PLrS21S1jm43jz48qjdfYNpuIPgL3lNJ_o&index=10
+* https://www.youtube.com/watch?v=9s6UALbavlY&list=PLrS21S1jm43jz48qjdfYNpuIPgL3lNJ_o&index=11
+* Адитья Бхаргава - Грокаем алгоритмы. Глава 9
