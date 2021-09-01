@@ -32,7 +32,7 @@ levenshteinDistance({a: 'pen_pineapple_apple_pen', b: 'pen', maxDistance: 5}).st
 If you want to make search more smart, you can upgrade score method. For Example:
 ```
 let bonusScore = 0;
-let сInclude = .4;
+let сInclude = .05;
 
 function prepare(_dd) {
     cconst relative = Math.max(0, (_dd / _b.length - bonusScore));
@@ -45,7 +45,7 @@ function prepare(_dd) {
   }
 
 if(_b.includes(_a))
-    bonusScore+= сInclude;
+    bonusScore+= сInclude * _a.length;
 
 levenshteinDistance({a: '23176515', b: 'signage-23176515'}) // { relative: 0.09999999999999998, similarity: 0.9, steps: 8}
 levenshteinDistance({a: 'Ruslan', b: 'Ruslan-Yoda'}) // { relative: 0.09999999999999998, similarity: 0.9, steps: 8}
