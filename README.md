@@ -9,7 +9,12 @@ levenshteinDistance({a: 'fish', b: 'Fish'}).steps // {1} case sensitive
 ```
 ### relative & similarity
 ```
-levenshteinDistance({a:'github', b: 'gethub'}); // {relative: 0.16666666666666666, similarity: 0.8333333333333334, steps: 1}
+levenshteinDistance({a:'github', b: 'gethub'}); 
+/* {
+    relative: 0.16666666666666666, 
+    similarity: 0.8333333333333334, 
+    steps: 1 
+} */
 ```
 
 ## Try to take best from all js impls
@@ -35,7 +40,7 @@ let bonusScore = 0;
 let сInclude = .05;
 
 function prepare(_dd) {
-    cconst relative = Math.max(0, (_dd / _b.length - bonusScore));
+    const relative = Math.max(0, (_dd / _b.length - bonusScore));
     const similarity = 1 - relative;
     return {
       steps:_dd,
